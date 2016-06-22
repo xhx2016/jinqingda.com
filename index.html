@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+        万盛电玩--24X7小时100%兑换--美女客服
+    </title>
+    <meta name="keywords" content="100%兑换,现金捕鱼,神龙宝藏,摇钱树,淡水鱼,森林舞会,金鲨银鲨, 美女陪玩,游众电玩 公平诚信平台，昌盛鱼机,线上捕鱼,昌盛原版 网上电玩城,现金冲兑游戏"/>
+    <meta name="description" content="百乐门电玩—信誉实力的手机捕鱼游戏平台，24小时随时兑现，公平公正,美女客服。
+电玩大厅：昌盛神龙捕鱼游戏，街机水浒传，多财多福，摇钱树捕鱼游戏…"/>
+    <meta name="viewport" id="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    <script>
+        (function () {
+            var _53code = document.createElement("script");
+            _53code.src = "//tb.53kf.com/code/code/10135252/2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(_53code, s);
+        })();
+    </script>
+</head>
+
+<body>
+<div class="all">
+    <div class="upIOS" id="upIOS"><a>升级IOS9,游戏打不开了怎么办?</a></div>
+    <div class="opIOS" id="opIOS"><img src="img/01.png"></div>
+    <div class="closeIOS" id="closeIOS"><img src="img/close.png"></div>
+    <div class="warp" id="warp">
+        <div class="banner">
+            <ul>
+                <li><img src="img/1.jpg" id="bannerImg" data-show="on" onclick="return false;"></li>
+            </ul>
+        </div>
+        <img src="img/back.jpg" onclick="return false;" id="d_img">
+        <!--<div class="uc_down"></div>-->
+        <a class="foot" href="about.html">关于我们|联系我们</a>
+        <span class="foot">Copyright©深圳市金庆达实业有限公司</span>
+        <a class="down" id="down"></a>
+    </div>
+
+</div>
+<script>
+    //ios下提示框
+    document.getElementById("upIOS").onclick=function() {
+        document.getElementById("opIOS").style.display = "block";
+        document.getElementById("closeIOS").style.display = "block";
+    }
+    document.getElementById("closeIOS").onclick=function() {
+        document.getElementById("opIOS").style.display = "none";
+        document.getElementById("closeIOS").style.display = "none";
+    }
+    //判断终端类型 ios下提示框为显示
+    var ua = navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(ua)) {
+        document.getElementById("upIOS").style.display="block";
+    }
+
+    setInterval(changeImg, 1800);
+    function changeImg() {
+        var src = document.getElementById('bannerImg').getAttribute('src');
+        var num = src.charAt(4);
+        num++;
+        if (num == 5) {
+            document.getElementById('bannerImg').setAttribute('src', "img/" + 1 + ".jpg");
+        } else {
+            document.getElementById('bannerImg').setAttribute('src', "img/" + num + ".jpg");
+        }
+    }
+    document.getElementById('down').onclick=function () {
+        if (isPIA() == 2) {  //安卓
+            window.open('download/DT_WS_WSId-1.apk');
+        } else if (isPIA() == 1) { // 苹果
+            document.getElementById("down").href="itms-services://?action=download-manifest&url=https://coding.net/u/magnetVip/p/dw/git/raw/master/dt_ws";
+        } else {
+            var isok = confirm("是否用电脑下载apk");
+            if (isok) {
+                window.open('download/DT_WS_WSId-1.apk');
+            } else {
+                return;
+            }
+        }
+    };
+    //解决uc浏览器兼容absolue的问题
+    if(navigator.userAgent.indexOf('UCBrowser') > -1) {
+        document.getElementById("down").style.display="none";
+        document.getElementById('d_img').onclick=function(){
+            if (isPIA() == 2) {  //安卓
+                window.open('download/DT_WS_WSId-1.apk');
+            } else if (isPIA() == 1) { // 苹果
+                document.getElementById("down").href="itms-services://?action=download-manifest&url=https://coding.net/u/magnetVip/p/dw/git/raw/master/dt_ws";
+            }
+        }
+    }
+    //js判断终端是安卓还是苹果
+    function isPIA() {
+        var u = navigator.userAgent, app = navigator.appVersion;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if (isiOS) {
+            return 1;
+        }
+        if (isAndroid) {
+            return 2
+        };
+    }
+</script>
+</body>
+</html>
